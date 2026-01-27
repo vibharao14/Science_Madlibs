@@ -17,10 +17,11 @@ noun2 = input("Enter a plural noun: ")
 location = input("Enter a location: ")
 adverb1 = input("Enter an adverb: ")
 tool = input("Enter a tool: ")
+pastverb = input("Enter the past tense of a verb(ex hid, disappeared, ran, exploded):")
+
 while True:
 	try:
 		num = int(input("Enter a number(ex 1, 2, 3, 4): "))
-		pastverb = input("Enter the past tense of a verb(ex hid, disappeared, ran, exploded):")
 	except ValueError:
 		print("Please enter an integer.")
 		
