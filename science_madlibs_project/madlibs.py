@@ -59,3 +59,16 @@ print(f"This study is one of the most important to all of humanity. Knowing abou
 	f"{adverb1} {pastverb[:-2]} helps us save every {animal} trapped in {color} {material} containers. " 
 
 	f"{noun2} {happy_verb} with joy whenever they see a safe {animal}.")
+
+#Print Methods
+print("METHODS:")
+print("_" * 40)
+print(f"We used a {tool} to conduct 300 trials. In one of the trials, the {tool} began smoking slightly, so "
+
+	f"that could've skewed the results. For that trial, we replaced the {tool} with a bunsen burner. " 
+
+	f"Everything else remained consistent. We placed each of the {noun2} on a {noun1} and swung the {tool}"
+
+	f" around in a circle {num*2} times before taking a picture and writing down the measurement.")
+
+
