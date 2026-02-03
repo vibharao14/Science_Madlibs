@@ -40,7 +40,8 @@ happy_verb = input("What do you do when you're happy? Enter a verb: ")
 #Methods: We used blank to measure blank
 print(f"Every {animal} certainly has you to thank for your contributions to their safety. They want to know  "
 
-	f"how you did it. They've promised to be the top readers of your scientific journal when it's ready. ")
+	f"how you did it. They've promised to be the top readers of your scientific journal when it's ready. "
+	f"They also want to get some exact numbers from you. ")
 
 #Results: Percentage of blank showed behavior/trait
 while True:
@@ -88,4 +89,14 @@ print(f"We used a {tool} to conduct 300 trials. In one of the trials, the {tool}
 
 	f" around in a circle {num*2} times before taking a picture and writing down the measurement.")
 
-
+#Print Results
+print("RESULTS: ")
+print("_" * 40)
+print(f "Results show that {percentage}% of {noun2} {adverb1} {pastverb[:2] when exposed to a {noun1}. }")
+if (correlated):
+	print( f"This means that there is a notable correlation there. ")
+else:
+	print(f "This means there isn't a strong correlation there, but the effect on the {color} {material}"
+	f " situation is still extremely clear(and helpful). ")
+print(f"{percentage2}% of resesarchers are now pushing for {noun1} {animal} saviors as a result. ")
+#Add graph image generator 
