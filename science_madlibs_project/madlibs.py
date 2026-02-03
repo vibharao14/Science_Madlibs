@@ -92,11 +92,11 @@ print(f"We used a {tool} to conduct 300 trials. In one of the trials, the {tool}
 #Print Results
 print("RESULTS: ")
 print("_" * 40)
-print(f "Results show that {percentage}% of {noun2} {adverb1} {pastverb[:2]} when exposed to a {noun1}. ")
+print(f"Results show that {percentage}% of {noun2} {adverb1} {pastverb[:2]} when exposed to a {noun1}. ")
 if (correlated):
-	print( f"This means that there is a notable correlation there. ")
+	print(f"This means that there is a notable correlation there. ")
 else:
-	print(f "This means there isn't a strong correlation there, but the effect on the {color} {material}"
-	f " situation is still extremely clear(and helpful). ")
+	print(f"This means there isn't a strong correlation there, but the effect on the {color} {material}"
+	f" situation is still extremely clear(and helpful). ")
 print(f"{percentage2}% of resesarchers are now pushing for {noun1} {animal} saviors as a result. ")
 #Add graph image generator 
