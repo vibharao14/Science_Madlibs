@@ -38,9 +38,26 @@ material = input("Enter a material: ")
 happy_verb = input("What do you do when you're happy? Enter a verb: ")
 
 #Methods: We used blank to measure blank
+print(f"Every {animal} certainly has you to thank for your contributions to their safety. They want to know  "
+
+	f"how you did it. They've promised to be the top readers of your scientific journal when it's ready. ")
 
 #Results: Percentage of blank showed behavior/trait
+while True:
+	try:
+		percentage = float(input("What's your favorite number between 1 and 100?" ))
+		percentage2= float(input("What's your second favorite number between 1 and 100? "))
+		break
+	except ValueError:
+		print("Please enter a float")
+correlated = True
 
+if (percentage/100 >= 0.5):
+	correlated = True
+else:
+	correlated = False
+adj = input("Enter an adjective: ")
+ 
 #References: Citations to other papers
 
 
