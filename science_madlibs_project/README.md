@@ -19,5 +19,5 @@ I built this project to practice Python functions, input validation, program
 structure (main()), and basic data visualization with matplotlib
 
 ## How to run
-- ```bash
-- python3 madlibs.py
+```bash
+python3 madlibs.py
