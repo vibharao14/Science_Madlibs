@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 #Introduction
 
 
@@ -6,6 +8,8 @@
 #Generate Title
 
 #Authors
+
+#functions
 def get_author():
 	author = input("What's your name? ")
 
@@ -106,7 +110,15 @@ def print_results_output(percentage, noun2, adverb1, pastverb, noun1, correlated
 		print(f"This means there isn't a strong correlation there, but the effect on the {color} {material}"
 		f" situation is still extremely clear(and helpful). ")
 	print(f"{percentage2}% of researchers are now pushing for {noun1} {animal} saviors as a result. ")
-#Add graph image generator
+#Graph image generator
+def plot_results(percentage, percentage2):
+	labels = ["Group A", "Group B"]
+	values = [percentage, percentage2]
+	plt.bar(labels, values)
+	plt.ylabel("Percentage")
+	plt.title("Study Results")
+	print(f"This graph shows the results more clearly: ")
+	plt.show()
 
 def main():
 	author = get_author()
@@ -123,7 +135,7 @@ def main():
 	print_intro(noun1, noun2, adverb1, pastverb, animal, color, material, happy_verb)
 	print_methods_output(tool, noun2, noun1, num)
 	print_results_output(percentage, noun2, adverb1, pastverb, noun1, correlated, animal, color, material, percentage2) 
-
+	plot_results(percentage, percentage2)
 if __name__ == "__main__":
 	main()
 
