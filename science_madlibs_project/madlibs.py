@@ -6,59 +6,74 @@
 #Generate Title
 
 #Authors
-print()
-author = input("What's your name? ")
+def get_author():
+	author = input("What's your name? ")
 
-#Abstract(summary of the study)
-print(f"Ah, {author}, the renowed scientist! The scientific community will be ecstatic to hear about your findings! But before your scientific journal is released, I want to ask you some questions directly. ")
+	#Abstract(summary of the study)
+	print(f"Ah, {author}, the renowned scientist! The scientific community will be ecstatic to hear about your findings! But before your scientific journal is released, I want to ask you some questions directly. ")
+	return author
 
-noun1 = input("Enter a noun: ")
-noun2 = input("Enter a plural noun: ")
-location = input("Enter a location: ")
-adverb1 = input("Enter an adverb: ")
-tool = input("Enter a tool: ")
-pastverb = input("Enter the past tense of a verb(ex hid, disappeared, ran, exploded): ")
+author = get_author()
 
-while True:
-	try:
-		num = int(input("Enter a number(ex 1, 2, 3, 4): "))
-		break
-	except ValueError:
-		print("Please enter an integer. ")
-		
+def study_conditions():
+	noun1 = input("Enter a noun: ")
+	noun2 = input("Enter a plural noun: ")
+	location = input("Enter a location: ")
+	adverb1 = input("Enter an adverb: ")
+	tool = input("Enter a tool: ")
+	pastverb = input("Enter the past tense of a verb(ex hid, disappeared, ran, exploded): ")
+	return noun1, noun2, location, adverb1, tool, pastverb
+
+noun1, noun2, location, adverb1, tool, pastverb = study_conditions()
+
+def get_num():
+	while True:
+		try:
+			num = int(input("Enter a number(ex 1, 2, 3, 4): "))
+			break
+		except ValueError:
+			print("Please enter an integer. ")
+	return num
+
+num = get_num()		
+
+def get_percentages():
+	while True:
+		try:
+			percentage = float(input("What's your favorite number between 1 and 100?" ))
+			percentage2 = float(input("What's your second favorite number between 1 and 100? "))
+			break
+		except ValueError:
+			print("Please enter a float")
+	return percentage, percentage2
+percentage, percentage2 = get_percentages()
 
 #Intro: Why the study is important
-print(f"Wow, {noun2} are so important. It's a good thing you thought of measuring how a {noun1} affects them. "
+def print_intro(noun1, noun2):
+	print(f"Wow, {noun2} are so important. It's a good thing you thought of measuring how a {noun1} affects them. "
 
-	f"I want to hear more about the significant impact your study had. ")
-
-animal = input("Enter an animal: ")
-color = input("Enter a color: ")
-material = input("Enter a material: ")
-happy_verb = input("What do you do when you're happy? Enter a verb: ")
-
+		f"I want to hear more about the significant impact your study had. ")
+print_intro(noun1, noun2)
+def get_animal_data():
+	animal = input("Enter an animal: ")
+	color = input("Enter a color: ")
+	material = input("Enter a material: ")
+	happy_verb = input("What do you do when you're happy? Enter a verb: ")
+	return animal, color, material, happy_verb
+animal, color, material, happy_verb = get_animal_data()
 #Methods: We used blank to measure blank
-print(f"Every {animal} certainly has you to thank for your contributions to their safety. They want to know  "
+def print_methods(animal):
+	print(f"Every {animal} certainly has you to thank for your contributions to their safety. They want to know  "
 
-	f"how you did it. They've promised to be the top readers of your scientific journal when it's ready. "
-	f"They also want to get some exact numbers from you. ")
-
+		f"how you did it. They've promised to be the top readers of your scientific journal when it's ready. "
+		f"They also want to get some exact numbers from you. ")
+print_methods(animal)
 #Results: Percentage of blank showed behavior/trait
-while True:
-	try:
-		percentage = float(input("What's your favorite number between 1 and 100?" ))
-		percentage2= float(input("What's your second favorite number between 1 and 100? "))
-		break
-	except ValueError:
-		print("Please enter a float")
-correlated = True
-
-if (percentage/100 >= 0.5):
-	correlated = True
-else:
-	correlated = False
-adj = input("Enter an adjective: ")
- 
+def results_data(percentage):
+	correlated = percentage >= 50
+	adj = input("Enter an adjective: ")
+	return correlated, adj
+correlated, adj = results_data(percentage)
 #References: Citations to other papers
 
 
@@ -98,5 +113,5 @@ if (correlated):
 else:
 	print(f"This means there isn't a strong correlation there, but the effect on the {color} {material}"
 	f" situation is still extremely clear(and helpful). ")
-print(f"{percentage2}% of resesarchers are now pushing for {noun1} {animal} saviors as a result. ")
+print(f"{percentage2}% of researchers are now pushing for {noun1} {animal} saviors as a result. ")
 #Add graph image generator 
